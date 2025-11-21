@@ -1,12 +1,12 @@
-package com.example.homework.controller;
+package com.example.homework.order.presentation;
 
 
-import com.example.homework.common.ResponseEntity;
-import com.example.homework.domain.PurchaseOrder;
-import com.example.homework.domain.PurchaseOrderStatus;
-import com.example.homework.dto.OrderInfo;
-import com.example.homework.dto.OrderRequest;
-import com.example.homework.service.PurchaseOrderService;
+import com.example.homework.order.common.ResponseEntity;
+import com.example.homework.order.domain.PurchaseOrder;
+import com.example.homework.order.domain.PurchaseOrderStatus;
+import com.example.homework.order.application.dto.OrderInfo;
+import com.example.homework.order.presentation.dto.OrderRequest;
+import com.example.homework.order.application.PurchaseOrderService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
@@ -24,7 +24,7 @@ public class PurchaseOrderController {
 
     @Operation(summary = "주문 생성", description = "상품과 구매자 정보를 바탕으로 주문을 생성한다.")
     @PostMapping
-    public ResponseEntity<PurchaseOrder> create(@RequestBody OrderRequest request) {
+    public ResponseEntity<OrderInfo> create(@RequestBody OrderRequest request) {
         return orderService.create(request.toCommand());
     }
 

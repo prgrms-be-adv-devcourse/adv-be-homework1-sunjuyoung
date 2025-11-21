@@ -1,4 +1,4 @@
-package com.example.homework.common;
+package com.example.homework.order.common;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,5 +18,4 @@ public class ResponseEntity<T> {
         this.data = data;
         this.count = count;
     }
-
 }

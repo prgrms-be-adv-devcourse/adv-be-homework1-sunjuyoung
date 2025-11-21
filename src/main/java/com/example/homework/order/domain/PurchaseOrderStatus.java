@@ -1,4 +1,4 @@
-package com.example.homework.domain;
+package com.example.homework.order.domain;
 
 public enum PurchaseOrderStatus {
     CREATED,

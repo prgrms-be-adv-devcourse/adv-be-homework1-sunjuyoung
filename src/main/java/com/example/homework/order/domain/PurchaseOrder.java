@@ -1,6 +1,6 @@
-package com.example.homework.domain;
+package com.example.homework.order.domain;
 
-import com.example.homework.dto.OrderCommand;
+import com.example.homework.order.application.dto.OrderCommand;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,7 +10,6 @@ import java.util.UUID;
 
 @Entity
 @Getter
-@Setter
 @ToString
 @Table(name = "purchase_order", schema = "public")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -42,7 +41,6 @@ public class PurchaseOrder {
     private LocalDateTime updatedAt;
 
 
-
     //생성자 메서드
     public static PurchaseOrder create(OrderCommand command) {
         PurchaseOrder purchaseOrder = new PurchaseOrder();
@@ -58,7 +56,7 @@ public class PurchaseOrder {
     }
 
 
-    public void markPaid(PurchaseOrderStatus status) {
+    public void changeStatus(PurchaseOrderStatus status) {
         this.status = status;
     }
 

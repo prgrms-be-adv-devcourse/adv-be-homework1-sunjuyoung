@@ -1,9 +1,6 @@
-package com.example.homework.dto;
-
-import com.example.homework.domain.PurchaseOrderStatus;
+package com.example.homework.order.application.dto;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 public record OrderCommand(

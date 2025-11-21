@@ -1,8 +1,8 @@
-package com.example.homework.dto;
+package com.example.homework.order.application.dto;
 
 
-import com.example.homework.domain.PurchaseOrder;
-import com.example.homework.domain.PurchaseOrderStatus;
+import com.example.homework.order.domain.PurchaseOrder;
+import com.example.homework.order.domain.PurchaseOrderStatus;
 
 
 import java.math.BigDecimal;
