@@ -37,7 +37,6 @@ public class PurchaseOrderService {
         List<OrderInfo> list = page.stream().map(order -> OrderInfo.from(order)).toList();
 
         return new ResponseEntity<>(HttpStatus.OK.value(), list, page.getNumberOfElements());
-
     }
 
     public ResponseEntity<OrderInfo> statusChange(UUID id, PurchaseOrderStatus status) {

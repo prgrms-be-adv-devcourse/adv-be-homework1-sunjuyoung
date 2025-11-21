@@ -46,12 +46,9 @@ public class PurchaseOrder {
         PurchaseOrder purchaseOrder = new PurchaseOrder();
         purchaseOrder.amount = command.amount();
         purchaseOrder.status = PurchaseOrderStatus.CREATED;
-        purchaseOrder.createdAt = LocalDateTime.now();
-        purchaseOrder.updatedAt = LocalDateTime.now();
         purchaseOrder.productId = command.productId();
         purchaseOrder.sellerId = command.sellerId();
         purchaseOrder.memberId = command.memberId();
-        purchaseOrder.id = UUID.randomUUID();
         return purchaseOrder;
     }
 

@@ -36,13 +36,13 @@ public class PurchaseOrderController {
 
     @Operation(summary = "주문 상태 변경 PAID", description = "주문상태 결제완료 변경")
     @PatchMapping("{id}/paid")
-    public ResponseEntity<PurchaseOrder> updatePaid(@PathVariable UUID id) {
+    public ResponseEntity<OrderInfo> updatePaid(@PathVariable UUID id) {
         return orderService.statusChange(id, PurchaseOrderStatus.PAID);
     }
 
     @Operation(summary = "주문 상태 변경 CANCEL", description = "주문 상태를 취소로 변경")
     @PatchMapping("{id}/cancel")
-    public ResponseEntity<PurchaseOrder> updateCancel(@PathVariable UUID id) {
+    public ResponseEntity<OrderInfo> updateCancel(@PathVariable UUID id) {
         return orderService.statusChange(id,PurchaseOrderStatus.CANCELLED);
     }
 
